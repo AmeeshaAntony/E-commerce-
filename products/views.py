@@ -13,7 +13,7 @@ def list_products(request):
 	Args:
 		request (_type_): _description_
 
-	Returns:
+	Returns:action="/order/add_to_cart"
 		_type_: _description_
 	"""
 	page=request.GET.get('page',1)

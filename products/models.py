@@ -5,6 +5,7 @@ class Product(models.Model):
 	LIVE=1
 	DELETE=0
 	DELETE_CHOICES=((LIVE,'Live'),(DELETE,'Delete'))
+	id = models.AutoField(primary_key=True)
 	title=models.CharField(max_length=200)
 	price=models.FloatField()
 	description=models.TextField()
