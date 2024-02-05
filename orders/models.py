@@ -24,8 +24,7 @@ class Order(models.Model):
 		)
 	order_status=models.IntegerField(choices=STATUS_CHOICE,default=CART_STAGE)
 
-	def __str__(self) -> str:
-		return "order-{}-{}".format(self.id,self.owner.user.username)
+	
 
 class OrderedItem(models.Model):
 	product=models.ForeignKey(Product,on_delete=models.SET_NULL,null=True,related_name='added_carts')

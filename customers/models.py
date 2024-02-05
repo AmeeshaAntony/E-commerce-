@@ -10,7 +10,7 @@ class Customer(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200)
     address = models.TextField()
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='customer_profile', null=True, blank=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="customer_profile", null=True, blank=True)
     phone = models.CharField(max_length=10)
     delete_status = models.IntegerField(choices=DELETE_CHOICES, default=LIVE)
     created_at = models.DateTimeField(auto_now_add=True)
